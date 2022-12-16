@@ -7,11 +7,23 @@
     <bean class="com.example.reader.processor.RegexProcessor" id="regexProcessor"/>
     <bean class="com.example.reader.processor.LibraryProcessor" id="libraryProcessor"/>
 
+    <bean class="com.example.reader.processor.ZIPProcessor" id="zipProcessorWithManualTextProcessor">
+        <property name="textProcessor" ref="manualProcessor"/>
+    </bean>
+
     <bean class="com.example.reader.reader.PlainTextReader" id="plainTextReaderWithManualProcessor">
         <property name="processor" ref="manualProcessor"/>
     </bean>
 
     <bean class="com.example.reader.reader.XMLTextReader" id="xmlTextReaderWithManualProcessor">
         <property name="processor" ref="manualProcessor"/>
+    </bean>
+
+    <bean class="com.example.reader.reader.JSONTextReader" id="jsonTextReaderWithManualProcessor">
+        <property name="processor" ref="manualProcessor"/>
+    </bean>
+
+    <bean class="com.example.reader.reader.ZIPArchiveReader" id="zipArchiveReaderWithManualProcessor">
+        <property name="processor" ref="zipProcessorWithManualTextProcessor"/>
     </bean>
 </beans>
