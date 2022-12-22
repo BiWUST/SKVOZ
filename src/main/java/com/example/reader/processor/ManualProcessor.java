@@ -6,7 +6,7 @@ import java.util.List;
 
 @Component
 public class ManualProcessor implements Processor {
-    private final List<String> digits = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "-");
+    private final List<String> digits = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".");
 
     @Override
     public String process(String text) {

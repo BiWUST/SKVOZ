@@ -3,6 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean class="com.example.reader.cryptor.AESCryptor" id="aesCryptor"/>
+
     <bean class="com.example.reader.processor.ManualProcessor" id="manualProcessor"/>
     <bean class="com.example.reader.processor.RegexProcessor" id="regexProcessor"/>
     <bean class="com.example.reader.processor.LibraryProcessor" id="libraryProcessor"/>
@@ -14,11 +16,9 @@
     <bean class="com.example.reader.reader.PlainTextReader" id="plainTextReaderWithManualProcessor">
         <property name="processor" ref="manualProcessor"/>
     </bean>
-
     <bean class="com.example.reader.reader.XMLTextReader" id="xmlTextReaderWithManualProcessor">
         <property name="processor" ref="manualProcessor"/>
     </bean>
-
     <bean class="com.example.reader.reader.JSONTextReader" id="jsonTextReaderWithManualProcessor">
         <property name="processor" ref="manualProcessor"/>
     </bean>
