@@ -1,6 +1,7 @@
 package com.example.reader.reader;
 
 import com.example.reader.processor.Processor;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+@Component
 public class JSONTextReader implements TextReader {
     private Processor processor;
     private File inputFile;

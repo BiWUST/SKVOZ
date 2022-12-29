@@ -2,6 +2,7 @@ package com.example.reader.reader;
 
 import com.example.reader.processor.ArchiveProcessor;
 import com.example.reader.processor.ZIPProcessor;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,6 +13,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+@Component
 public class ZIPArchiveReader implements ArchiveReader {
     private ArchiveProcessor processor;
     private File inputFile;

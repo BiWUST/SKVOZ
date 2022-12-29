@@ -1,10 +1,13 @@
 package com.example.reader.processor;
 
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+@Component
 public class ZIPProcessor implements ArchiveProcessor {
     private Processor textProcessor;
 

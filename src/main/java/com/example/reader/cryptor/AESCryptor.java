@@ -1,5 +1,7 @@
 package com.example.reader.cryptor;
 
+import org.springframework.stereotype.Component;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -11,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Base64;
 
+@Component
 public class AESCryptor implements Cryptor {
     byte[] decodedKey = Base64.getDecoder().decode("secret");
     private File inputFile;
