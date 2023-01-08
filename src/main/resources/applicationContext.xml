@@ -16,6 +16,9 @@
     <bean class="com.example.reader.reader.PlainTextReader" id="plainTextReaderWithManualProcessor">
         <property name="processor" ref="manualProcessor"/>
     </bean>
+    <bean class="com.example.reader.reader.PlainTextReader" id="plainTextReaderWithLibraryProcessor">
+        <property name="processor" ref="libraryProcessor"/>
+    </bean>
     <bean class="com.example.reader.reader.XMLTextReader" id="xmlTextReaderWithManualProcessor">
         <property name="processor" ref="manualProcessor"/>
     </bean>
